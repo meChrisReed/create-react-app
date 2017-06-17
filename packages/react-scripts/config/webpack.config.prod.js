@@ -126,7 +126,7 @@ module.exports = {
       // First, run the linter.
       // It's important to do this before Babel processes the JS.
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
         enforce: 'pre',
         use: [
           {
@@ -158,7 +158,7 @@ module.exports = {
       {
         exclude: [
           /\.html$/,
-          /\.(js|jsx)$/,
+          /\.jsx?$/,
           /\.css$/,
           /\.json$/,
           /\.bmp$/,
@@ -183,7 +183,7 @@ module.exports = {
       },
       // Process JS with Babel.
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
         include: paths.appSrc,
         loader: require.resolve('babel-loader'),
         // @remove-on-eject-begin
